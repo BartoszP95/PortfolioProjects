@@ -29,18 +29,18 @@ ORDER By AppsPerGenre DESC
 --overwiev of the apps' ratings
 
 SELECT
-	   min(user_rating) as MinRating,
-	   max(user_rating) As MaxRating,
-       avg(user_rating) As AvgRating
+	min(user_rating) as MinRating,
+	max(user_rating) As MaxRating,
+	avg(user_rating) As AvgRating
 FROM AppleStore
 
 --do paid apps have higher ratings than free apps
 
-SELECt CAse
+SELECt CASE
 	When price > 0 THEN 'paid'
-    ELSE 'free'
-    END AS App_Type,
-    avg(user_rating) as Avg_Rating
+    	ELSE 'free'
+    	END AS App_Type,
+    	avg(user_rating) as Avg_Rating
 FROM AppleStore
 GROUP by App_Type
 
@@ -49,9 +49,9 @@ GROUP by App_Type
 SELECT CASE
 	WHEN lang.num < 10 THEN '<10 languages'
 	WHEN lang.num BETWEEN 10 and 30 THEN '10-30 languages'
-    ELSE '>30 languages'
+    	ELSE '>30 languages'
  	END as language_bucket,
-    avg(user_rating) AS Avg_Rating
+    	avg(user_rating) AS Avg_Rating
 FROM AppleStore
 GROUP BY language_bucket
 ORDER BY Avg_Rating DESC
@@ -73,7 +73,7 @@ SELECT
 	track_name,
 	user_rating
 FROM
-(
+	(
 	SELECT
 	prime_genre,
 	track_name,
@@ -81,7 +81,7 @@ FROM
 	RANK() OVER(PARTITION BY prime_genre ORDER BY user_rating DESC, rating_count_tot DESC) rank
 	FROM
 	AppleStore
-) AS a
+	) AS a
 WHERE
 a.rank = 1
 
