@@ -5,7 +5,9 @@ I am constantly seeking new challenges and opportunities to expand my knowledge 
 
 For my projects I used these datasets from Kaggle:
 https://www.kaggle.com/datasets/ramamet4/app-store-apple-data-set-10k-apps
+
 https://www.kaggle.com/datasets/victorsoeiro/netflix-tv-shows-and-movies
+
 https://www.kaggle.com/datasets/chandanchoudhury/world-population-dataset
 
 1. Apple Store SQL Analysis
