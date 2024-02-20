@@ -4,6 +4,7 @@ In this portfolio, you will find a collection of my projects showcasing my skill
 I am constantly seeking new challenges and opportunities to expand my knowledge and expertise in the field of data analytics.
 
 For my projects I used these datasets from Kaggle:
+
 https://www.kaggle.com/datasets/ramamet4/app-store-apple-data-set-10k-apps
 
 https://www.kaggle.com/datasets/victorsoeiro/netflix-tv-shows-and-movies
